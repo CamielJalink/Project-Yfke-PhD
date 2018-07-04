@@ -1,7 +1,6 @@
-# hello-world
-A respository to learn the github basics.
+# Phd site
 
-Hello world, 
+To run locally with python 3.X:
+``` python -m http.server 8000 ```
 
-My name is Camiel, a dutch guy who studied artificial intelligence and psychology and then decided to learn some business process management.
-Now leaving this awefull world i'm learning lua and javascript to start creating a game with the Corona engine and some simple websites using vanilla javascript and skeleton css.
+Go to ```localhost:8000```
