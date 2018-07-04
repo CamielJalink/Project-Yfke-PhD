@@ -1,0 +1,144 @@
+Wensen project Yfke:
+
+
+- Een navbar met de gewenste tabjes, zoals Ronald maar dan centered, zonder de naam Ronald in de bar te zetten. En zonder te breed te zijn. 
+- Ook nog logo's in de navbars? Wel icoontjes voor bij het inklappen, gewoon omdat het kan? ;)
+- Net zoals bij Gorjan die navbar geen kleur geven / dezelfde kleur als de site? Niet teveel stuff erop zoals Ronald de Haan wel heeft.
+- Net als Ronald links naar eigen pagina maar dan verder naar beneden gescrolled?
+		--> In mapje bootstrapopdrachten is ' index.html' een redelijk tof voorbeeld qua styling en icoontjes.
+		--> En imagegalary.html in diezelfde map
+
+	- Hover effect over tabjes, met eventjeel inverted kleuren als we kleuren doen.
+	- 
+
+- Momenteel is er niet zo heel veel content zou ik verwachten. Hierdoor neig ik dus naar die Ronald manier van alle content op 1 pagina met daarop links daarheen.
+- Eventueel een jumbotron voor 'news'
+
+
+
+Vragen en opties:
+- Logo met link naar een website van het ILC oid?
+- Sticky-top navbar? Dan scrolled hij mee naar beneden
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------HTML-onderdelen -------------------
+
+- Navbar.
+- Header Yfke Dulek
+- Header titel of jobinformation, met een paragraph erbij?
+- Bio veld, misschien in zo'n jumbotron of op een andere manier eruit gelicht?
+- Image voor foto, met een subtiele border
+
+- Horizontal rulers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------Originele mail van Yfke------------------------------------------------------------------
+
+
+Hi lief,
+
+Ik heb een beetje rondgeklikt op wat websites van andere mensen, en bedacht wat ik daar mooi/lelijk aan vond (+/-).
+
+CS:
+https://homepages.cwi.nl/~schaffne/index.php
++ bij papers staan plaatjes voor available files (PDF, tex, etc)
+- wel heel basic
+- overal weer verschillende layouts
+- php is dead :D
+
+RdH:
+https://staff.science.uva.nl/r.dehaan/
++ mooie verzorgde layout (al is het geel wel erg geel)
++ menu blijft altijd in beeld
+- alles op 1 pagina is misschien wat verwarrend?
+
+RdW
+https://homepages.cwi.nl/~rdewolf/
+- heel simpel, alleen maar tekst
+
+GA
+http://www.alagic.org/
++ mooie verzorgde layout
+- inhoud: geen papers op eigen site gezet, en ik hoef ook geen persoonlijke foto's op mijn site te zetten
+
+KG
+https://sites.google.com/view/koengroenland/home
+- Te veel bombarie, weinig schermruimte meer over voor de inhoud
++ Een "spotlight"/nieuws sectietje, waar hij zijn meest recente paper op uitlegt (moet wel weer onderhouden worden)
+
+SJ
+https://homepages.cwi.nl/~jeffery/
++ neutraal/simpel
++ ook een "new" plek
+- alles op 1 pagina, geen menu om snel iets te vinden
+
+AH
+https://huelsing.wordpress.com/
++ niet druk maar ook niet helemaal wit
+- wordpress balkjes en dingen overal ;)
+
+
+
+
+
+
+Wat mijn eigen wensen zijn:
+
+    clean/simpel (geen flashy kleuren en bewegende effecten)
+    niet te breed (dus gebruik die max. width :D)
+    uiteindelijk: ook geschikt voor mobiele apparaten
+    een makkelijke manier om lijsten van papers/praatjes/vakken neer te zetten met allemaal dezelfde layout (zie hieronder, bij (*))
+    een veilige manier om mijn emailadres te publiceren (zodat hij niet door website crawlers wordt gepakt voor spam). Hier zijn allerlei manieren voor; van het simpelweg schrijven "dulek [at] wci [dot] nl" ivp "dulek@cwi.nl", tot een afbeelding van de tekst, tot het injecteren van het emailadres met javascript. Leef je uit ;)
+    Pagina's: Home, Publications, Talks, Teaching, Contact.
+    Tussenkopjes op sommige pagina's. Bijvoorbeeld Talks wil ik kunnen onderverdelen in Conference Talks, Invited Talks, Seminar Talks, en Outreach.
+
+
+Ik hoop dat je daar al wat mee kan tijdens het filmpjes kijken! :) maar we kunnen het natuurlijk later nog uitgebreider bespreken ;)
+
+
+Kusjes!
+
+Yfke
+
+
+
+(*) een voorbeeld is: titel, auteurs, proceedings/journal.
+
+Quantum Homomorphic Encryption for Polynomial-Size Circuits
+Yfke Dulek, Christian Schaffner, Florian Speelman
+In CRYPTO 2016, Proceedings of Advances in Cryptology, LNCS 9816, pages 3-32, 2016.
+
+Nice to have daarbij:
+
+    Links naar co-auteurs. Dus bijvoorbeeld dat "Christian Schaffner" bij alle papers naar zijn personal homepage linkt. Helemaal mooi als ik maar 1x die URL ergens hoef in te voeren, maar weet niet of dat mogelijk is.
+    Icoontjes voor PDF/tex files. (zie bijv. eerste twee websites). Die lay-out zou ik willen hergebruiken voor talks (waarbij ik link naar slides en/of video) en teaching (waarbij ik link naar de website van een vak)
+    Een optionele extra regel, zodat ik er bijvoorbeeld "★ Best student paper award at QIP 2017" onder/naast/whatever kan zetten. Maar niet elk paper heeft natuurlijk zo'n extra-cool ding.
