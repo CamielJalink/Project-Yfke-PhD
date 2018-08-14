@@ -67,6 +67,8 @@ h5{
 .abstractTextVisible{
 	max-height: 1000px;
 	transition: max-height 2s ease-out;
+/*	border: solid steelblue 2px;
+	padding: 1%;*/
 }
 
 
