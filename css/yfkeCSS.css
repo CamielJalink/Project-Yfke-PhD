@@ -1,48 +1,108 @@
 hr{
-	margin: 2rem 0;
+	margin: 6rem 0;
+}
+
+h3{
+	margin-top: 1rem;
 }
 
 h5{
 	font-weight: 400;
 }
 
-#biography{
-	padding-top: 2%;
+.publication{
+	list-style: none;
 }
+
+.publicationList{
+	margin-left: 3rem;
+}
+
+.sectionHeader{
+	margin-bottom: 5rem;
+}
+
+.title{
+	font-weight: 600;
+}
+
+/*This is a font-awesome class.*/
+.fa-angle-right{
+	color: steelblue;
+	font-size: 1.2em;
+}
+
+.fa-angle-down{
+	color: steelblue;
+	font-size: 1.2em;
+}
+
+.abstract{
+	cursor: pointer;
+}
+
+.abstractLabel{
+	margin-bottom: 0;
+	margin-left: 0.5%;
+	vertical-align: 10%;
+	color: steelblue;
+}
+
+#biographyHR{
+	margin: 2rem 0;
+}
+
+/*This class has the default values for abstract text boxes. */
+.abstractTextDefault{
+	max-width: 80%;
+	margin: 1% auto 0 2%;
+	overflow: hidden;
+}
+
+.abstractTextHidden{
+	max-height: 0px;
+	transition: max-height 1s ease-out;
+}
+
+.abstractTextVisible{
+	max-height: 1000px;
+	transition: max-height 2s ease-out;
+}
+
+
+
+/*---------------------------All navbar styling ----------------------------*/
 
 .navbar{
 	background-color: steelblue;
-/*	position: fixed;
-	top: 0;*/
 	width: 100%;
 	display: block;
 	margin-bottom: 50px;
 }
 
 .navbar-list{
-    list-style: none;
-    margin-bottom: 0;
-    text-align: center;
+  list-style: none;
+  margin-bottom: 0;
+  text-align: center;
 }
-
 
 /*inline-block is necessary when you want inline items in your navbar have changeable height. */
 .navbar-item{
-    display: inline-block;
-    margin-bottom: 0;
-    width: 24%;
+  display: inline-block;
+  margin-bottom: 0;
+  width: 24%;
 }
 
 .navbar-link{
-    text-transform: uppercase;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: .2rem;
-    text-decoration: none;
-    line-height: 6.5rem;
-    color: #dae7f1;
-    display: inline-block;
-    width: 100%;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .2rem;
+  text-decoration: none;
+  line-height: 6.5rem;
+  color: #dae7f1;
+  display: inline-block;
+  width: 100%;
 }
 
 .navbar-link-text{
@@ -60,7 +120,8 @@ h5{
 
 
 
-/*Deze heeft niet de extra classes op navbar-link-text en icon omdat hij net als de default moet zijn. */
+/*------------------------ Responsive settings as used by skeleton CSS site -------------------------*/
+
 @media (min-width: 400px) {
 	.navbar-item{width: 18%;}
 }

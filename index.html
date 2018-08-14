@@ -1,108 +1,157 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Yfke Dulek</title>
-	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="stylesheet" type="text/css" href="css/skeleton.css">
-	<link rel="stylesheet" type="text/css" href="css/yfkeCSS.css">
+  <title>Yfke Dulek</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity=  sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="css/yfkeCSS.css">
 </head>
+
 <body>
 
-
-<!--
-	Voorbeelden en handige links:
-	https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fixed_menu
--->
-
-<nav class="navbar">
-	<ul class="navbar-list">
-		<li class="navbar-item">
-			<a class="navbar-link" href="#dummyLinkTarget">
-				<span class="navbar-link-text">Home</span>
-				<i class="fas fa-home fa-2x navbar-link-icon"></i>
-			</a>
-		</li>
-		<li class="navbar-item">
-			<a class="navbar-link" href="#dummyLinkTarget">
-				<span class="navbar-link-text">Publications</span>
-				<i class="fas fa-file-alt fa-2x navbar-link-icon"></i>
-			</a>
-		</li>
-		<li class="navbar-item">
-			<a class="navbar-link" href="#dummyLinkTarget">
-				<span class="navbar-link-text">Talks</span>
-				<i class="fas fa-comments fa-2x navbar-link-icon"></i>
-			</a>
-		</li>
-		<li class="navbar-item">
-			<a class="navbar-link" href="#dummyLinkTarget">
-				<span class="navbar-link-text">Teaching</span>
-				<i class="fas fa-user-graduate fa-2x navbar-link-icon"></i>
-			</a>
-		</li>
-	</ul>
-</nav>
-	
-<!-- Vast een aantal icons die me leuk leken!
-	<i class="fas fa-user-graduate"></i>    (voor teaching)
-	<i class="fas fa-file-alt"></i>         (voor je papers)
-	<i class="far fa-file-alt"></i>         (alt papers)
-	<i class="fas fa-book"></i>             (nog weer alt voor papers)
-	<i class="fas fa-home"></i>             (Icon voor home)
-	<i class="fas fa-comments"></i>         (Icon voor talks)
-	<i class="far fa-comment-alt"></i>      (talks, 1 wolk, open wolk)
-	<i class="fas fa-comment-alt"></i>      (talks, 1 wolk, dichte wolk)
-	<i class="fas fa-chalkboard-teacher"></i>   (voor teaching, Yfkes keuze)
-	<i class="fas fa-microphone-alt"></i>    voor talks, yfke's keuze
+<!-- Custom navbar elements -->
+	<nav class="navbar">
+		<ul class="navbar-list">
+			<li class="navbar-item">
+				<a class="navbar-link" href="#dummyLinkTarget">
+					<span class="navbar-link-text">Home</span>
+					<i class="fas fa-home fa-2x navbar-link-icon"></i>
+				</a>
+			</li>
+			<li class="navbar-item">
+				<a class="navbar-link" href="#publicationsHeader">
+					<span class="navbar-link-text">Publications</span>
+					<i class="fas fa-file-alt fa-2x navbar-link-icon"></i>
+				</a>
+			</li>
+			<li class="navbar-item">
+				<a class="navbar-link" href="#talksHeader">
+					<span class="navbar-link-text">Talks</span>
+					<i class="fas fa-comments fa-2x navbar-link-icon"></i>
+				</a>
+			</li>
+			<li class="navbar-item">
+				<a class="navbar-link" href="#dummyLinkTarget">
+					<span class="navbar-link-text">Teaching</span>
+					<i class="fas fa-user-graduate fa-2x navbar-link-icon"></i>
+				</a>
+			</li>
+		</ul>
+	</nav>
+		
 
 
- -->
+	<!-- Vast een aantal icons die me leuk leken!
+		<i class="fas fa-user-graduate"></i>    (voor teaching)
+		<i class="fas fa-file-alt"></i>         (voor je papers)
+		<i class="far fa-file-alt"></i>         (alt papers)
+		<i class="fas fa-book"></i>             (nog weer alt voor papers)
+		<i class="fas fa-home"></i>             (Icon voor home)
+		<i class="fas fa-comments"></i>         (Icon voor talks)
+		<i class="far fa-comment-alt"></i>      (talks, 1 wolk, open wolk)
+		<i class="fas fa-comment-alt"></i>      (talks, 1 wolk, dichte wolk)
+		<i class="fas fa-chalkboard-teacher"></i>   (voor teaching, Yfkes keuze)
+		<i class="fas fa-microphone-alt"></i>    voor talks, yfke's keuze
+
+		<i class="fas fa-angle-down"></i>
+		<i class="fas fa-angle-right"></i>
+	 -->
+
+		<!-- 
+			Talks: conference talks, invited talks, seminar talks, outreach
+		-->
 
 
+<!-- Main container in which most content of this page are placed -->
+	<div class="container">
 
-	<!-- 
-		Talks: conference talks, invited talks, seminar talks, outreach
-	-->
-
-
-<div class="container">
+	<!-- Two grid columns for the bio-section of the page -->
     <div class="row">
-        <div class="four columns">
-        	<img class="u-max-full-width" src="images/placeholder.jpg">
-        </div>
-        <div class="eight columns" id="biography">
-    		<h3>Yfke Dulek</h3>
-    		<hr>
-			<h5>Badass researcherchick @ wouldn't you like to know</h5>
-			<p>
-				This is my BIO, it's an underdog redemption story that's been stolen and used by Naruto to make millions.
-				Such is the life of the insanely gifted that others must mock my greatness with their inferior attempts at doublecrossery.
-				That sentence started out pretty cool but at the end I kind of have to admit that my english isn't up to par.
-			</p>
+      <div class="four columns">
+      	<img class="u-max-full-width" src="images/placeholder.jpg">
+      </div>
 
-        </div>
+      <div class="eight columns">
+	  		<h3>Yfke Dulek</h3>
+	  		<hr id="biographyHR">
+				<h5>PhD student at QuSoft</h5>
+				<p>
+					This is my BIO, it's an underdog redemption story that's been stolen and used by Naruto to make millions.
+					Such is the life of the insanely gifted that others must mock my greatness with their inferior attempts at doublecrossery.
+					That sentence started out pretty cool but at the end I kind of have to admit that my english isn't up to par.
+				</p>
+      </div>
+		</div>
+
+		<hr>
+
+	<!-- Publications section starts here -->
+		<h3 class="sectionHeader" id="publicationsHeader">Publications</h3>
+
+		<ul class="publicationList">
+			<li class="publication">
+				<div class="title">Title of my first paper, this is a great paper full of forbidden knowledge</div>
+				<div>These n00bs think they also helped: loserlordA, Prof.LoserLord</div>
+				<div>Published at a place</div>
+				<div>Get it in PDF (logolink), get it as word, get it as DOI</div>
+				<div class="abstract">
+					<i class="fas fa-angle-right abstractIcon"></i>
+					<span class="abstractLabel">abstract</span>
+				</div>
+				<p class="abstractTextDefault abstractTextHidden">
+					Vivamus sodales eros et mi porttitor, vel aliquet ante varius. Cras augue orci, sagittis a urna nec, porta eleifend metus. Aenean sed arcu sed augue vestibulum convallis aliquet vel metus. Etiam sit amet imperdiet lacus. Fusce molestie nisi maximus nunc lacinia, non efficitur est scelerisque. Nulla felis nibh, consequat eu enim non, ullamcorper vehicula arcu. Morbi dolor magna, egestas a velit vitae, volutpat aliquam ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer sed ipsum lectus. Aliquam at efficitur mi, vitae euismod sapien. Fusce sollicitudin nulla ut ante lacinia, ac eleifend turpis lacinia. Sed ex urna, fringilla non purus vitae, suscipit porta felis. Aenean id lacus quis diam hendrerit aliquam.
+				</p>
+			</li>
+			<li class="publication">
+				<div class="title">great</div>
+				<div>bait</div>
+				<div>mate</div>
+				<div>Get it in PDF (logolink), get it as word, get it as DOI</div>
+				<div class="abstract">
+					<i class="fas fa-angle-right abstractIcon"></i>
+					<span class="abstractLabel">abstract</span>
+				</div>
+				<p class="abstractTextDefault abstractTextHidden">
+					Vivamus sodales eros et mi porttitor, vel aliquet ante varius. Cras augue orci, sagittis a urna nec, porta eleifend metus. Aenean sed arcu sed augue vestibulum convallis aliquet vel metus. Etiam sit amet imperdiet lacus. Fusce molestie nisi maximus nunc lacinia, non efficitur est scelerisque. Nulla felis nibh, consequat eu enim non, ullamcorper vehicula arcu. Morbi dolor magna, egestas a velit vitae, volutpat aliquam ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer sed ipsum lectus. Aliquam at efficitur mi, vitae euismod sapien. Fusce sollicitudin nulla ut ante lacinia, ac eleifend turpis lacinia. Sed ex urna, fringilla non purus vitae, suscipit porta felis. Aenean id lacus quis diam hendrerit aliquam.
+				</p>
+			</li>
+			<li class="publication">
+				<div class="title">great</div>
+				<div>bait</div>
+				<div>mate</div>
+				<div>Get it in PDF (logolink), get it as word, get it as DOI</div>
+				<div class="abstract">
+					<i class="fas fa-angle-right abstractIcon"></i>
+					<span class="abstractLabel">abstract</span>
+				</div>
+				<p class="abstractTextDefault abstractTextHidden">
+					Vivamus sodales eros et mi porttitor, vel aliquet ante varius. Cras augue orci, sagittis a urna nec, porta eleifend metus. Aenean sed arcu sed augue vestibulum convallis aliquet vel metus. Etiam sit amet imperdiet lacus. Fusce molestie nisi maximus nunc lacinia, non efficitur est scelerisque. Nulla felis nibh, consequat eu enim non, ullamcorper vehicula arcu. Morbi dolor magna, egestas a velit vitae, volutpat aliquam ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer sed ipsum lectus. Aliquam at efficitur mi, vitae euismod sapien. Fusce sollicitudin nulla ut ante lacinia, ac eleifend turpis lacinia. Sed ex urna, fringilla non purus vitae, suscipit porta felis. Aenean id lacus quis diam hendrerit aliquam.
+				</p>
+			</li>
+		</ul>
+
+		<hr>
+
+	<!-- Talks section starts here.-->
+		<h3 class="sectionHeader" id="talksHeader">Talks</h3>
+
+		<ul>
+
+		</ul>
+
+<!-- 		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultricies viverra mattis. Etiam eu purus id felis faucibus rhoncus. Duis placerat eget felis eu viverra. Nulla facilisi. Fusce sed felis non ipsum iaculis lobortis at at ligula. Vivamus magna nisl, bibendum eu tristique id, consequat vel dolor. Aenean in mauris ornare sem posuere rhoncus ut sed sem. Phasellus iaculis augue at ex tempus facilisis. Sed luctus augue sed porttitor volutpat. Maecenas pellentesque risus sit amet mattis pellentesque. Nulla semper vehicula nulla, laoreet faucibus justo scelerisque sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc eu eleifend orci. Proin id fermentum lectus.
+
+			Vivamus sodales eros et mi porttitor, vel aliquet ante varius. Cras augue orci, sagittis a urna nec, porta eleifend metus. Aenean sed arcu sed augue vestibulum convallis aliquet vel metus. Etiam sit amet imperdiet lacus. Fusce molestie nisi maximus nunc lacinia, non efficitur est scelerisque. Nulla felis nibh, consequat eu enim non, ullamcorper vehicula arcu. Morbi dolor magna, egestas a velit vitae, volutpat aliquam ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer sed ipsum lectus. Aliquam at efficitur mi, vitae euismod sapien. Fusce sollicitudin nulla ut ante lacinia, ac eleifend turpis lacinia. Sed ex urna, fringilla non purus vitae, suscipit porta felis. Aenean id lacus quis diam hendrerit aliquam.
+
+			Phasellus auctor tempor pretium. Donec vitae tortor in arcu suscipit varius. Vivamus mattis, massa at faucibus eleifend, mi metus pulvinar felis, quis iaculis ante augue vel justo. Morbi dignissim tempor velit ut rutrum. Aenean eu nibh et tortor malesuada aliquam. Donec dignissim cursus vestibulum. Nullam at tortor id purus vehicula luctus in vel libero. Cras pretium accumsan nunc ac blandit.
+		</p> -->
+	   
+	  <h1 id="dummyLinkTarget">THIS IS THE TARGET</h1>
 	</div>
 
-	<hr>
-
-
-	<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ultricies viverra mattis. Etiam eu purus id felis faucibus rhoncus. Duis placerat eget felis eu viverra. Nulla facilisi. Fusce sed felis non ipsum iaculis lobortis at at ligula. Vivamus magna nisl, bibendum eu tristique id, consequat vel dolor. Aenean in mauris ornare sem posuere rhoncus ut sed sem. Phasellus iaculis augue at ex tempus facilisis. Sed luctus augue sed porttitor volutpat. Maecenas pellentesque risus sit amet mattis pellentesque. Nulla semper vehicula nulla, laoreet faucibus justo scelerisque sed. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc eu eleifend orci. Proin id fermentum lectus.
-
-Vivamus sodales eros et mi porttitor, vel aliquet ante varius. Cras augue orci, sagittis a urna nec, porta eleifend metus. Aenean sed arcu sed augue vestibulum convallis aliquet vel metus. Etiam sit amet imperdiet lacus. Fusce molestie nisi maximus nunc lacinia, non efficitur est scelerisque. Nulla felis nibh, consequat eu enim non, ullamcorper vehicula arcu. Morbi dolor magna, egestas a velit vitae, volutpat aliquam ex. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer sed ipsum lectus. Aliquam at efficitur mi, vitae euismod sapien. Fusce sollicitudin nulla ut ante lacinia, ac eleifend turpis lacinia. Sed ex urna, fringilla non purus vitae, suscipit porta felis. Aenean id lacus quis diam hendrerit aliquam.
-
-Phasellus auctor tempor pretium. Donec vitae tortor in arcu suscipit varius. Vivamus mattis, massa at faucibus eleifend, mi metus pulvinar felis, quis iaculis ante augue vel justo. Morbi dignissim tempor velit ut rutrum. Aenean eu nibh et tortor malesuada aliquam. Donec dignissim cursus vestibulum. Nullam at tortor id purus vehicula luctus in vel libero. Cras pretium accumsan nunc ac blandit.
-
-	</p>
-    <h1 id="dummyLinkTarget">THIS IS THE TARGET</h1>
-
-</div>
-
-
-
-
-
+	<script type="text/javascript" src="yfkeJS.js"></script>
 </body>
 </html>

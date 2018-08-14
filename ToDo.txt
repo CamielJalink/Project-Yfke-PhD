@@ -1,59 +1,35 @@
-Wensen project Yfke:
+------------------------------------------------------------
+Wishes, Idea's and Todo's
+------------------------------------------------------------
 
 
-- Een navbar met de gewenste tabjes, zoals Ronald maar dan centered, zonder de naam Ronald in de bar te zetten. En zonder te breed te zijn. 
-- Ook nog logo's in de navbars? Wel icoontjes voor bij het inklappen, gewoon omdat het kan? ;)
-- Net zoals bij Gorjan die navbar geen kleur geven / dezelfde kleur als de site? Niet teveel stuff erop zoals Ronald de Haan wel heeft.
-- Net als Ronald links naar eigen pagina maar dan verder naar beneden gescrolled?
-		--> In mapje bootstrapopdrachten is ' index.html' een redelijk tof voorbeeld qua styling en icoontjes.
-		--> En imagegalary.html in diezelfde map
+- ILLC logo with link to their home site.
+- Sticky-top navbar? Didn't seem to work well without using jquery and bootstrap.
+- Yfke's plaatje fixed size houden tot bepaalde punt bereikt worden in het resizen? 
 
-	- Hover effect over tabjes, met eventjeel inverted kleuren als we kleuren doen.
-	- 
+--- Section: Publications ---
 
-- Momenteel is er niet zo heel veel content zou ik verwachten. Hierdoor neig ik dus naar die Ronald manier van alle content op 1 pagina met daarop links daarheen.
-- Eventueel een jumbotron voor 'news'
+- Unordered list in a paragraph:
+    - Co-authors, Title, Release date, Published at "" (or spoken at this conference or something?)
+    - Entire Publications section should be collapseable?
+    - Expandable 'abstract' field
+    - Logo's for different data types, links to a location where the papers can be downloaded?
+- CSS styling? More than 1 column?
 
+- Styling: none?
 
-
-Vragen en opties:
-- Logo met link naar een website van het ILC oid?
-- Sticky-top navbar? Dan scrolled hij mee naar beneden
-- 
+-----------------------------
 
 
+--- Section: Talks ---
 
+- conference talks, invited talks, seminar talks, outreach (subsections)
+- Dropdown menu possible without using jquery / bootstrap?
+- Collapsable subsections and section
 
-
-
-
-
-
-
-
-
-
-
-
-----------------------HTML-onderdelen -------------------
-
-- Navbar.
-- Header Yfke Dulek
-- Header titel of jobinformation, met een paragraph erbij?
-- Bio veld, misschien in zo'n jumbotron of op een andere manier eruit gelicht?
-- Image voor foto, met een subtiele border
-
-- Horizontal rulers
-
-
-
-
-
-
-
-
-
-
+- Unordered list in a paragraph
+    - Date of talk, location of talk, subject of talk
+    - Collapsed abstract of talk?
 
 
 
