@@ -1,6 +1,5 @@
 # Phd site
 
-To run locally with python 3.X:
-``` python -m http.server 8000 ```
+This repository holds the source code for a academic (PhD) website for Yfke Dulek, which is not yet hosted.
 
-Go to ```localhost:8000```
+Code is done using basic javascript for learning purposes, and styles are based on the Skeleton CSS library: http://getskeleton.com/
