@@ -10,6 +10,10 @@ h5{
 	font-weight: 400;
 }
 
+.publicationDOI{
+	color: steelblue;
+}
+
 .publication{
 	list-style: none;
 }
@@ -22,24 +26,18 @@ h5{
 	font-weight: 600;
 }
 
-.publicationIconsColumn{
-	float: left;
-	width: 4em;
-}
-
-.publicationContentColumn{
-	width: calc(100% - 4em);
-	float: left;
-}
-
 .sectionHeader{
 	margin-bottom: 5rem;
+}
+
+.sectionSubHeader{
+	margin-top: 1.5em;
+	margin-bottom: 1.2em;
 }
 
 .sectionSubHeader span{
 	border-bottom: 1px solid #E1E1E1;
 	padding-bottom: 0.5em;
-/*	margin-top: 2rem;*/
 }
 
 /*These are additions on the originale font-awesome classes.*/
@@ -53,13 +51,15 @@ h5{
 	font-size: 1.2em;
 }
 
-.fa-file-pdf{
+.fa-file-alt{
 	font-size: 1.5em;
+	color: #222;
 }
 
 .fa-link{
-	font-size: 1.5em;
+	font-size: 1.4em;
 	padding-left: 0.3em;
+	color: #222;
 }
 
 .abstract{
@@ -145,7 +145,13 @@ h5{
 
 
 
-/*------------------------ Responsive settings as used by skeleton CSS site -------------------------*/
+
+
+/*------------------------ Responsive settings for navbar, based upon the grid as used by skeleton CSS -------------------------*/
+
+.customColumns{
+	margin-left: 0%;
+}
 
 @media (min-width: 400px) {
 	.navbar-item{width: 18%;}
@@ -163,6 +169,12 @@ h5{
 	.navbar-item{width: 15%;}
 	.navbar-link-text{display: inline-block;}
 	.navbar-link-icon{display: none;}
+	.two.columns{
+		width: 9%;
+	}
+	.ten.columns{
+		width: 90%;
+	}
 }
 
 /* Larger than desktop */
@@ -170,6 +182,12 @@ h5{
 	.navbar-item{width: 11%;}
 	.navbar-link-text{display: inline-block;}
 	.navbar-link-icon{display: none;}
+	.two.columns{
+		width: 7%;
+	}
+	.ten.columns{
+		width: 91%;
+	}
 }
 
 /* Larger than Desktop HD */
