@@ -4,7 +4,6 @@ Wishes, Idea's and Todo's
 
 
 - ILLC logo with link to their home site.
-- Sticky-top navbar? Didn't seem to work well without using jquery and bootstrap.
 - Yfke's plaatje fixed size houden tot bepaalde punt bereikt worden in het resizen? 
 
 --- Section: Publications ---
