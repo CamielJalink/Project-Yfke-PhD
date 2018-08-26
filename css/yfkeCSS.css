@@ -103,6 +103,8 @@ h5{
 	width: 100%;
 	display: block;
 	margin-bottom: 50px;
+	position: fixed;
+	z-index: 1; /*Make sure the navigation bar is on top of other content.*/
 }
 
 .navbar-list{
@@ -141,6 +143,10 @@ h5{
 .navbar-link:hover{
 	color: steelblue;
 	background-color: white;
+}
+
+.container{
+	padding-top: 75px; /*Prevent overlap with navigation bar, and add some extra spacing.*/
 }
 
 
