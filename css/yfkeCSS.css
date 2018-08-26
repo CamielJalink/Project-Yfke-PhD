@@ -27,7 +27,9 @@ h5{
 }
 
 .sectionHeader{
-	margin-bottom: 5rem;
+	/* Move actual position higher than visual position of content, to make space for navigation bar.*/
+	margin-top: -75px;
+	padding-top: 75px;
 }
 
 .sectionSubHeader{
