@@ -14,7 +14,7 @@ h5{
 	color: steelblue;
 }
 
-.publication{
+.listNoStyle{
 	list-style: none;
 }
 
@@ -22,7 +22,7 @@ h5{
 	font-style: italic;
 }
 
-.publicationTitle{
+.contentTitle{
 	font-weight: 600;
 }
 
