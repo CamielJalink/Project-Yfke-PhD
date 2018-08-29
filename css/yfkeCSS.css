@@ -108,6 +108,9 @@ h5{
 	width: 100%;
 	display: block;
 	margin-bottom: 50px;
+	position: sticky;
+	top: 0px;
+	z-index: 1;
 }
 
 .navbar-list{
@@ -135,6 +138,12 @@ h5{
   width: 100%;
 }
 
+/*This class makes sure the navbar doesn't hide the anchor-targets, by having the anchors target a span that is placed 100px higher.*/
+.anchorTargetOffset{
+	position: relative;
+	top: -100px;
+}
+
 .navbar-link-text{
 	display: none;
 }
@@ -152,7 +161,7 @@ h5{
 
 
 
-/*------------------------ Responsive settings for navbar, based upon the grid as used by skeleton CSS -------------------------*/
+/*------------------------ Responsive settings for navbar, based on the grid used by skeleton CSS -------------------------*/
 
 .customColumns{
 	margin-left: 0%;
