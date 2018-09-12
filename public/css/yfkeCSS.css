@@ -114,6 +114,7 @@ h5{
 	display: block;
 	margin-bottom: 50px;
 	position: sticky;
+	position: -webkit-sticky;
 	top: 0px;
 	z-index: 1;
 }
