@@ -21,4 +21,3 @@ function abstractClicked(){
 	text.classList.toggle("abstractTextHidden");
 	text.classList.toggle("abstractTextVisible");
 }
-
