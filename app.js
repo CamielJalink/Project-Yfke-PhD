@@ -12,12 +12,6 @@ app.set("view engine", "ejs");
 // Connects to the 'content' database which will have different collections, such as 'publications', 'talks', 'teaching' etc. 
 mongoose.connect("mongodb://localhost/content");
 
-
-
-// lees database in en maak objects aan
-
-
-// 
 var publicationSchema = new mongoose.Schema({
 	type: String, 
 	title: String, 
@@ -32,48 +26,26 @@ var publicationSchema = new mongoose.Schema({
 var Publication = mongoose.model("Publication", publicationSchema);
 
 
-// De text hieronder is een voorbeeld voor hoe ik dit later aanpakken kan. 
-
-//   var publication1ofzo = new Publication({
-//      type: "Conference Proceedings",
-//      ....etc.
-//   })
-
-
+// Root Route
 app.get("/", function(req, res){
 	res.render("index");
 })
 
 
-// Publications subpage that first requests all publications from the database. 
+// Publications route, that first requests all publications from the database.
 app.get("/publications", function(req, res){
 	
-	var publicationsList = [
-		{
-		type: "Publications", 
-		title: "Yfke and Mario save the world", 
-		authors: "Yfke, Camiel",
-		publishedIn: "Nintendo magazine", 
-		linkToArticle: "https://www.google.com/",
-		linkToArXiv: "https://www.google.com/",
-		doi: "https://www.google.com/", 
-		abstract: "One day Mario said 'Fuck it, I need help' and then went to get Yfke, and they killed Bowser good, the end."
-		},
-		
-		{
-		type: "Not a real publication",
-		title: "Yfke and Mario save the world, Part 2",
-		authors: "Yfke, Camiel",
-		publishedIn: "Nintendo magazine", 
-		linkToArticle: "https://www.google.com/",
-		linkToArXiv: "https://www.google.com/",
-		doi: "https://www.google.com/",
-		abstract: "One day Mario said 'Fuck it, I need help' and then went to get Yfke, and they killed Bowser good, the end."
+	Publication.find({}, function(err, publications){
+		if(err){
+			console.log("There was an error when attempting to retrieve publications from the database.");
+		} else{
+			console.log("Publications succesfully extracted from database");
+			res.render("publications", {publications: publications});
 		}
-	]
-	
-	res.render("publications", {publicationsList: publicationsList});
+	})
 })
+	
+	
 
 app.listen(process.env.PORT, process.env.IP, function(){
 	console.log("server is running");
