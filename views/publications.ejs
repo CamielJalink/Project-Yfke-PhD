@@ -1,9 +1,61 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>publications</title>
-</head>
-<body>
-  <h1>Test</h1>
-</body>
-</html>
+<% include partials/header %>
+
+<h3 class="sectionHeader"><span id="publicationsHeader" class="anchorTargetOffset">&nbsp;</span>Publications</h3>
+<h5 class="sectionSubHeader"> <span>Conference proceedings</span> </h5>
+
+<ul class="listNoStyle">
+
+  <% publicationsList.forEach(function(publication){ %>
+  
+	<li>
+		<div class="row">
+			<div class="two columns customColumns">
+				<a href=<%= publication.linkToArXiv %> target="_blank"><i class="far fa-file-alt"></i></a>
+				<a href=<%= publication.linkToArticle %> target="_blank"><i class="fas fa-link"></i></a>
+			</div>
+			<div class="ten columns customColumns">
+				<div class="contentTitle"> <%= publication.title %> </div>
+				<div><%= publication.author %></div>
+				<div class="publicationSource"><%= publication.publishedIn %></div>
+				<div>DOI: <a href="https://www.google.com" target="_blank" class="publicationDOI"><%= publication.doi %></a></div>
+				<div class="abstract">
+					<i class="fas fa-angle-right abstractIcon"></i>
+					<span class="abstractLabel">abstract</span>
+				</div>
+				<p class="abstractTextDefault abstractTextHidden">
+		      <%= publication.abstract %>
+				</p>
+			</div>
+		</div>
+	</li>
+	<% }) %> 
+</ul>
+		
+	
+		<!--
+		TODO's:
+		
+		1. DOI-link moet nog opgebouwd worden, deels uit de waarde in de database, en deels uit de standaard prefix voor die site. 
+		  (Doe ik dat in app.js, of zet ik dat hardcoded hier in de html? Feitelijk hoort het in de data zelf thuis, maar goed.)
+		2. Feitelijk wil ik de for loop zo bouwen dat hij rekening houdt met verschillende subtypen publications. 
+		3. Uitzoeken welke velden mogelijk leeg kunnen zijn. 
+		4. Testen wat er gebeurt als een veld met een leeg javascript attribute gevuld wordt. 
+		
+		Part2:
+
+		5. Uitzoeken hoe ik de database kan uitlezen en omzetten naar een javascript object.
+		6. Uitzoeken hoe ik de database kan vullen met 'echte' data. 
+		7. Database vullen met die vier bestaande papers. 
+		
+		
+		
+		-->
+		
+		
+		
+		
+		
+		
+		
+		
+<% include partials/footer %>
