@@ -1,3 +1,8 @@
+/* This is the primary css file, adding my own styles to the work of skeleton.css and fontawesome.
+   Note that font-awesome is used my this site but not in this public/css directory.
+   This is due to it being included by npm and placed in the node_modules directory.
+*/
+
 hr{
 	margin: 6rem 0;
 }

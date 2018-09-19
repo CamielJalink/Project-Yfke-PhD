@@ -5,8 +5,10 @@ var mongoose = require("mongoose");
 app.use('/styles/', express.static('public/css'));
 app.use('/images/', express.static('public/images'));
 app.use('/scripts/', express.static('public/scripts'));
+app.use('/fontawesome/', express.static('node_modules/@fortawesome/fontawesome-free'));
 
-// This line tells express to expect views to be .ejs files. 
+
+// This line tells express to expect views to be .ejs files.
 app.set("view engine", "ejs");
 
 // Connects to the 'content' database which will have different collections, such as 'publications', 'talks', 'teaching' etc. 
@@ -19,7 +21,7 @@ var publicationSchema = new mongoose.Schema({
 	publishedIn: String, 
 	linkToArticle: String,
 	linkToArXiv: String,
-	doi: String, 
+	doi: String,
 	abstract: String
 });
 
@@ -50,4 +52,3 @@ app.get("/publications", function(req, res){
 app.listen(process.env.PORT, process.env.IP, function(){
 	console.log("server is running");
 })
-

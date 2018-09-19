@@ -11,7 +11,11 @@
 		<div class="row">
 			<div class="two columns customColumns">
 				<a href=<%= publication.linkToArXiv %> target="_blank"><i class="far fa-file-alt"></i></a>
+				
+				<% if(publication.linkToArticle && publication.linkToArticle !== ""){%>
 				<a href=<%= publication.linkToArticle %> target="_blank"><i class="fas fa-link"></i></a>
+				<% }%>
+				
 			</div>
 			<div class="ten columns customColumns">
 				<div class="contentTitle"> <%= publication.title %> </div>
@@ -30,35 +34,15 @@
 	</li>
 	<% }) %> 
 </ul>
-	
+
 		<!--
 		TODO's:
-		
-DONE 1. DOI-link moet nog opgebouwd worden, deels uit de waarde in de database, en deels uit de standaard prefix voor die site. 
-		  (Doe ik dat in app.js, of zet ik dat hardcoded hier in de html? Feitelijk hoort het in de data zelf thuis, maar goed.)
-		  
-		  doi: op de vierde regel, voorafgegaand door "DOI: ". De tekst moet linken naar https://www.doi.org/het-nummer. 
-		  Dus bijv https://www.doi.org/10.1007/978-3-662-53015-3_1 voor het eerste artikel.
-		  
 		  
 		2. Feitelijk wil ik de for loop zo bouwen dat hij rekening houdt met verschillende subtypen publications. 
-		3. Uitzoeken welke velden mogelijk leeg kunnen zijn.
-		3.b. Bouwen dat die velden ook leeg blijven als dat moet.
-		4. Testen wat er gebeurt als een veld met een leeg javascript attribute gevuld wordt. 
-		
-		Part2:
 
-		5. Uitzoeken hoe ik de database kan uitlezen en omzetten naar een javascript object.
-		6. Uitzoeken hoe ik de database kan vullen met 'echte' data. 
-		7. Database vullen met die vier bestaande papers. 
-		
-		Part3:
 		8. Anchor-links in de navbar laten verwijzen naar de andere pages.
 		9. Aangeven op welke pagina je zit te werken, dmv een kleurtje in de navbar
 		
-		
 		-->
-		
-		
 		
 <% include partials/footer %>
