@@ -21,3 +21,23 @@ function abstractClicked(){
 	text.classList.toggle("abstractTextHidden");
 	text.classList.toggle("abstractTextVisible");
 }
+
+
+// The following script handles the inserting of Yfke's email adress after rendering the page. 
+//  (yfkedulek@cwi.nl)
+var emailButton = document.querySelector("#emailButton");
+var emailLocation = document.querySelector("#emailLocation");
+
+emailButton.addEventListener("click", emailClicked);
+
+function emailClicked(){
+	var address = "yfkedulek";
+	address = address + "@cwi.nl";
+	var mailToAddress = "mailto:" + address;
+	
+	var mailAnchor = document.createElement("a");
+	mailAnchor.setAttribute("href", mailToAddress);
+	mailAnchor.textContent = address;
+	
+	emailLocation.appendChild(mailAnchor);
+}

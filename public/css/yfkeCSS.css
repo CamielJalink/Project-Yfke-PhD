@@ -15,6 +15,29 @@ h5{
 	font-weight: 400;
 }
 
+@media (max-width: 549px) {
+	.mainImage {
+	  width: 50%;
+		padding-left: 24%;
+		padding-right: 24%;
+	}
+}
+
+@media (min-width: 550px) {
+	.mainImage{
+		width: 100%;
+		box-sizing: border-box;
+  }
+}
+
+#emailButton{
+	cursor: pointer;
+}
+
+#emailLocation{
+	margin-left: 10%;
+}
+
 .publicationDOI{
 	color: steelblue;
 }
