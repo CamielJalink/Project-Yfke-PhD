@@ -31,7 +31,7 @@ var Publication = mongoose.model("Publication", publicationSchema);
 
 // Root Route
 app.get("/", function(req, res){
-	res.render("index");
+	res.render("home");
 })
 
 
@@ -49,20 +49,19 @@ app.get("/publications", function(req, res){
 })
 
 
-
-// Old way of doing this, with the sort. I'll keep this here till i'm sure the other way works perfectly.
-
-// app.get("/publications", function(req, res){
+// Talks route
+app.get("/talks", function(req,res){
 	
-// 	Publication.find({}, function(err, publications){
-// 		if(err){
-// 			console.log("There was an error when attempting to retrieve publications from the database.");
-// 		} else{
-// 			console.log("Publications succesfully extracted from database");
-// 			res.render("publications", {publications: publications});
-// 		}
-// 	})
-// })
+	res.render("talks");
+})
+
+
+// Teaching route
+app.get("/teaching", function(req,res){
+	
+	res.render("teaching");
+})
+
 
 
 app.listen(process.env.PORT, process.env.IP, function(){

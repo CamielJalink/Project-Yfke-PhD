@@ -172,12 +172,6 @@ h5{
   width: 100%;
 }
 
-/*This class makes sure the navbar doesn't hide the anchor-targets, by having the anchors target a span that is placed 100px higher.*/
-.anchorTargetOffset{
-	top: -100px;
-	position: relative;
-}
-
 .navbar-link-text{
 	display: none;
 }
@@ -190,6 +184,7 @@ h5{
 	color: steelblue;
 	background-color: white;
 }
+
 
 
 
