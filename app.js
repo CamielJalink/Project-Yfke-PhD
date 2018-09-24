@@ -22,7 +22,8 @@ var publicationSchema = new mongoose.Schema({
 	linkToArticle: String,
 	linkToArXiv: String,
 	doi: String,
-	abstract: String
+	abstract: String,
+	year: Number
 });
 
 var Publication = mongoose.model("Publication", publicationSchema);
@@ -37,7 +38,7 @@ app.get("/", function(req, res){
 // Publications route, that first requests all publications from the database.
 app.get("/publications", function(req, res){
 	
-	Publication.find({}, function(err, publications){
+	Publication.find().sort({year: "descending"}).exec(function(err, publications){
 		if(err){
 			console.log("There was an error when attempting to retrieve publications from the database.");
 		} else{
@@ -46,8 +47,23 @@ app.get("/publications", function(req, res){
 		}
 	})
 })
+
+
+
+// Old way of doing this, with the sort. I'll keep this here till i'm sure the other way works perfectly.
+
+// app.get("/publications", function(req, res){
 	
-	
+// 	Publication.find({}, function(err, publications){
+// 		if(err){
+// 			console.log("There was an error when attempting to retrieve publications from the database.");
+// 		} else{
+// 			console.log("Publications succesfully extracted from database");
+// 			res.render("publications", {publications: publications});
+// 		}
+// 	})
+// })
+
 
 app.listen(process.env.PORT, process.env.IP, function(){
 	console.log("server is running");

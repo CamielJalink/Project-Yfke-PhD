@@ -112,3 +112,5 @@ publicationPush.save(function(err, publication){
 		console.log("publication saved to database");
 	}
 })
+
+

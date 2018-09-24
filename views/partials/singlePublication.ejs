@@ -1,0 +1,26 @@
+<!-- A single publication, of any type, its data filled from the publications collection in the content database -->
+<li>
+	<div class="row">
+		<div class="two columns customColumns">
+			<a href=<%= publication.linkToArXiv %> target="_blank"><i class="far fa-file-alt"></i></a>
+			
+			<% if(publication.linkToArticle && publication.linkToArticle !== ""){%>
+			<a href=<%= publication.linkToArticle %> target="_blank"><i class="fas fa-link"></i></a>
+			<% }%>
+			
+		</div>
+		<div class="ten columns customColumns">
+			<div class="contentTitle"> <%= publication.title %> </div>
+			<div><%= publication.authors%></div>
+			<div class="publicationSource">In <%= publication.publishedIn %></div>
+			<div>DOI: <a href="https://www.doi.org/<%=publication.doi%>" target="_blank" class="publicationDOI"><%= publication.doi %></a></div>
+			<div class="abstract">
+				<i class="fas fa-angle-right abstractIcon"></i>
+				<span class="abstractLabel">abstract</span>
+			</div>
+			<p class="abstractTextDefault abstractTextHidden">
+	      <%= publication.abstract %>
+			</p>
+		</div>
+	</div>
+</li>
