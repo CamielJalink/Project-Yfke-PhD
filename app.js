@@ -11,9 +11,10 @@ app.use('/fontawesome/', express.static('node_modules/@fortawesome/fontawesome-f
 // This line tells express to expect views to be .ejs files.
 app.set("view engine", "ejs");
 
-// Connects to the 'content' database which will have different collections, such as 'publications', 'talks', 'teaching' etc. 
+// Connects to the 'content' database which will have different collections, such as 'publications', 'talks', 'teaching' etc.
 mongoose.connect("mongodb://localhost/content");
 
+// The publication schema, for the publication collection in the content database.
 var publicationSchema = new mongoose.Schema({
 	type: String, 
 	title: String, 
@@ -29,30 +30,54 @@ var publicationSchema = new mongoose.Schema({
 var Publication = mongoose.model("Publication", publicationSchema);
 
 
+
+// the same, for talks.
+var talksSchema = new mongoose.Schema({
+	type: String,
+	event: String,
+	shortName: String,
+	eventURL: String,
+	location: String,
+	date: String,
+	dateInt: Number,
+	title: String
+});
+
+var Talk = mongoose.model("Talk", talksSchema);
+
+
+
+
 // Root Route
 app.get("/", function(req, res){
 	res.render("home");
 })
 
 
-// Publications route, that first requests all publications from the database.
+// Publications route, that retrieves publications from the db.
 app.get("/publications", function(req, res){
 	
 	Publication.find().sort({year: "descending"}).exec(function(err, publications){
 		if(err){
-			console.log("There was an error when attempting to retrieve publications from the database.");
+			console.log("There was an error attempting to retrieve publications from the db.");
 		} else{
-			console.log("Publications succesfully extracted from database");
 			res.render("publications", {publications: publications});
 		}
 	})
 })
 
 
-// Talks route
+// Talks route, that retrieves publications from the db. 
 app.get("/talks", function(req,res){
 	
-	res.render("talks");
+	Talk.find().sort({dateInt: "descending"}).exec(function(err, talks){
+		if(err){
+			console.log("There was an error attempting to retrieve talks from the db");
+		} else{
+			console.log("Talks succesfully extracted from db");
+			res.render("talks", {talks: talks});
+		}
+	})
 })
 
 
@@ -61,7 +86,6 @@ app.get("/teaching", function(req,res){
 	
 	res.render("teaching");
 })
-
 
 
 app.listen(process.env.PORT, process.env.IP, function(){

@@ -30,14 +30,6 @@ h5{
   }
 }
 
-#emailButton{
-	cursor: pointer;
-}
-
-#emailLocation{
-	margin-left: 10%;
-}
-
 .publicationDOI{
 	color: steelblue;
 }
@@ -136,7 +128,7 @@ h5{
 
 /*---------------------------All navbar styling ----------------------------*/
 
-.navbar{
+nav {
 	background-color: steelblue;
 	width: 100%;
 	display: block;
@@ -185,12 +177,28 @@ h5{
 	background-color: white;
 }
 
+/*This class is assigned with javascript to navbar-link corresponding to the current webpage/route*/
+.navbar-link-selected{
+	color: steelblue;
+	background-color: white;
+}
 
+/*When hovering anywhere on the navbar, only the hovered-link will be shown as different.
+By this I mean that the selected navbar-link is temporarily reverted to the same colors as the rest of the navbar*/
+nav:hover .navbar-link-selected{
+	color: #dae7f1;
+	background-color: steelblue;
+}
 
-
+/* This bit of styling fixes the hovering for the navbar-link of the page we are already on. */
+nav:hover .navbar-link-selected:hover{
+	color: steelblue;
+	background-color: white;
+}
 
 
 /*------------------------ Responsive settings for navbar, based on the grid used by skeleton CSS -------------------------*/
+
 
 .customColumns{
 	margin-left: 0%;

@@ -4,12 +4,7 @@ var allNavbarLinks = document.querySelectorAll(".navbar-link");
 for(var i = 0; i < allNavbarLinks.length; i++){
 	
 	if(allNavbarLinks[i].href == window.location.href){
-
-		// This is not seperation of concerns.
-		// Adding a class won't do the trick however, because the css and html for this page have already loaded.
-		// Until i find a better solution than this, i will abuse javascript to change the two styles.
-		allNavbarLinks[i].style.background = "white";
-		allNavbarLinks[i].style.color = "steelblue";
+		allNavbarLinks[i].classList.add("navbar-link-selected");
 	}
 }
 
@@ -39,20 +34,16 @@ function abstractClicked(){
 }
 
 
+
 // The following script handles the inserting of Yfke's email adress after rendering the page.
-var emailButton = document.querySelector("#emailButton");
 var emailLocation = document.querySelector("#emailLocation");
 
-emailButton.addEventListener("click", emailClicked);
+var address = "yfkedulek";
+address = address + "@cwi.nl";
+var mailToAddress = "mailto:" + address;
 
-function emailClicked(){
-	var address = "yfkedulek";
-	address = address + "@cwi.nl";
-	var mailToAddress = "mailto:" + address;
-	
-	var mailAnchor = document.createElement("a");
-	mailAnchor.setAttribute("href", mailToAddress);
-	mailAnchor.textContent = address;
-	
-	emailLocation.appendChild(mailAnchor);
-}
+var mailAnchor = document.createElement("a");
+mailAnchor.setAttribute("href", mailToAddress);
+mailAnchor.textContent = address;
+
+emailLocation.appendChild(mailAnchor);
