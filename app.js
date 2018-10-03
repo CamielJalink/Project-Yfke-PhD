@@ -11,9 +11,8 @@ app.use('/fontawesome/', express.static('node_modules/@fortawesome/fontawesome-f
 // This line tells express to expect views to be .ejs files.
 app.set("view engine", "ejs");
 
-// Connects to the 'content' database which will have different collections, such as 'publications', 'talks', 'teaching' etc.
-// mongoose.connect("mongodb://localhost/content");
-mongoose.connect("mongodb://Camiel:developer1@ds121413.mlab.com:21413/yfkephdsite");
+// Connects to the 'content' database using a environment variable.
+mongoose.connect(process.env.DATABASEURL);
 
 // The publication schema, for the publication collection in the content database.
 var publicationSchema = new mongoose.Schema({

@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
-// mongoose.connect("mongodb://localhost/content");
-mongoose.connect("mongodb://Camiel:developer1@ds121413.mlab.com:21413/yfkephdsite");
+mongoose.connect(process.env.DATABASEURL);
+
 
 var publicationSchema = new mongoose.Schema({
 	type: String, 
