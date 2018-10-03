@@ -40,7 +40,8 @@ var talksSchema = new mongoose.Schema({
 	location: String,
 	date: String,
 	dateInt: Number,
-	title: String
+	title: String,
+	videoURL: String
 });
 
 var Talk = mongoose.model("Talk", talksSchema);

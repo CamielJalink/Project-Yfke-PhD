@@ -1,0 +1,29 @@
+<!-- A single talk, of any type, its data filled from the talks collection in the content database -->
+
+<li>
+	<div class="row">
+	  
+		<div class="two columns customColumns">
+		  <% if(talk.videoURL && talk.videoURL !== ""){ %>
+			  <a href=<%=talk.videoURL%> target="_blank"><i class="far fa-play-circle"></i></a>
+  	  <% } else{ %>
+  	    &nbsp;
+  	  <% } %>
+		</div>
+  	
+		<div class="ten columns customColumns">
+			<div class="contentTitle">
+				<%= talk.event %>
+				<% if(talk.shortName && talk.shortName !== "" && talk.eventURL && talk.eventURL !== ""){ %>
+			    (<a href= <%=talk.eventURL%> target="_blank"><%=talk.shortName%></a>)
+				<% } else if(talk.shortName && talk.shortName !== "") { %>
+				  (<%=talk.shortName%>)
+				<% } %>
+			</div>
+			<div><%=talk.location%>, <%=talk.date%></div>
+			<div><%=talk.title%></div>
+		</div>
+	</div>
+</li>
+
+

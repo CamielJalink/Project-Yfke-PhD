@@ -3,115 +3,29 @@
 
 
 <h3 class="sectionHeader">Talks</h3>
+<!--Three subsections, each with a filter on the array of talks, to create subsets.-->
 <h5 class="sectionSubHeader"><span>Conference talks</span></h5>
 
 <ul class="listNoStyle">
-	<li>
-		<div class="row">
-			<div class="two columns customColumns">
-				<i class="far fa-play-circle"></i>
-			</div>
-			<div class="ten columns customColumns">
-				<div class="contentTitle">
-					Event name goes here 
-					<a href="" target="_blank">(there might be a link here)</a>
-				</div>
-				<div>Location and date go here</div>
-				<div>Finally, title of the talk will go here</div>
-			</div>
-		</div>
-	</li>
-	<li>
-		<div class="row">
-			<div class="two columns customColumns">
-				<!-- <i class="far fa-play-circle"></i> -->
-				&nbsp;
-			</div>
-			<div class="ten columns customColumns">
-				<div class="contentTitle">
-					Event name goes here 
-					<a href="" target="_blank">(there might be a link here)</a>
-				</div>
-				<div>Location and date go here</div>
-				<div>Finally, title of the talk will go here</div>
-			</div>
-		</div>
-	</li>
+  <% talks.filter(function(talk){return talk.type==="conference talks"}).forEach(function(talk){ %>
+    <% include partials/singleTalk.ejs %>
+  <% }) %>
 </ul>
-
 
 <h5 class="sectionSubHeader"><span>Invited talks</span></h5>
 
 <ul class="listNoStyle">
-	<li>
-		<div class="row">
-			<div class="two columns customColumns">
-				<!-- <i class="far fa-play-circle"></i> -->
-				&nbsp;
-			</div>
-			<div class="ten columns customColumns">
-				<div class="contentTitle">
-					Event name goes here 
-					<a href="" target="_blank">(there might be a link here)</a>
-				</div>
-				<div>Location and date go here</div>
-				<div>Finally, title of the talk will go here</div>
-			</div>
-		</div>
-	</li>
-	<li>
-		<div class="row">
-			<div class="two columns customColumns">
-				<!-- <i class="far fa-play-circle"></i> -->
-				&nbsp;
-			</div>
-			<div class="ten columns customColumns">
-				<div class="contentTitle">
-					Event name goes here 
-					<a href="" target="_blank">(there might be a link here)</a>
-				</div>
-				<div>Location and date go here</div>
-				<div>Finally, title of the talk will go here</div>
-			</div>
-		</div>
-	</li>
+  <% talks.filter(function(talk){return talk.type==="invited talks"}).forEach(function(talk){ %>
+    <% include partials/singleTalk.ejs %>
+  <% }) %>
 </ul>
 
 <h5 class="sectionSubHeader"><span>Seminars and outreach</span></h5>
 
 <ul class="listNoStyle">
-	<li>
-		<div class="row">
-			<div class="two columns customColumns">
-				<i class="far fa-play-circle"></i>
-			</div>
-			<div class="ten columns customColumns">
-				<div class="contentTitle">
-					Event name goes here 
-					<a href="" target="_blank">(there might be a link here)</a>
-				</div>
-				<div>Location and date go here</div>
-				<div>Finally, title of the talk will go here</div>
-			</div>
-		</div>
-	</li>
-	<li>
-		<div class="row">
-			<div class="two columns customColumns">
-				<i class="far fa-play-circle"></i>
-			</div>
-			<div class="ten columns customColumns">
-				<div class="contentTitle">
-					Event name goes here 
-					<a href="" target="_blank">(there might be a link here)</a>
-				</div>
-				<div>Location and date go here</div>
-				<div>Finally, title of the talk will go here</div>
-			</div>
-		</div>
-	</li>
+  <% talks.filter(function(talk){return talk.type==="seminars and outreach"}).forEach(function(talk){ %>
+    <% include partials/singleTalk.ejs %>
+  <% }) %>
 </ul>
-	
-
 
 <% include partials/footer %>
