@@ -59,7 +59,7 @@ app.get("/", function(req, res){
 // Publications route, that retrieves publications from the db.
 app.get("/publications", function(req, res){
 	
-	Publication.find().sort({year: "descending"}).exec(function(err, publications){
+	Publication.find().sort({dateInt: "descending"}).exec(function(err, publications){
 		if(err){
 			console.log("There was an error attempting to retrieve publications from the db.");
 		} else{
