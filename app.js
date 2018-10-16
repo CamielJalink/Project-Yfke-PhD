@@ -49,6 +49,18 @@ var Talk = mongoose.model("Talk", talksSchema);
 
 
 
+var teachingSchema = new mongoose.Schema({
+  course: String,
+  level: String,
+  institution: String,
+  semester: String,
+  role: String,
+  description: String,
+  dateInt: Number
+})
+
+var Teaching = mongoose.model("Teaching", teachingSchema);
+
 
 // Root Route
 app.get("/", function(req, res){
@@ -86,9 +98,15 @@ app.get("/talks", function(req,res){
 // Teaching route
 app.get("/teaching", function(req,res){
 	
-	res.render("teaching");
+	Teaching.find().sort({dateInt: "descending"}).exec(function(err, teachings){
+		if(err){
+			console.log("There was an error attempting to retrieve teachings from the db");
+		} else{
+			console.log("Teachings succesfully extracted from db");
+			res.render("teaching", {teachings: teachings});
+		}
+	})
 })
-
 
 app.listen(process.env.PORT, process.env.IP, function(){
 	console.log("server is running");

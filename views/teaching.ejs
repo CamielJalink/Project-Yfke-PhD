@@ -3,4 +3,14 @@
 
 <h3 class="sectionHeader">Teaching</h3>
 
+<div class="row">
+  <div class="offset-by-one eleven columns">
+    <ul class="listNoStyle">
+      <% teachings.forEach(function(teaching){ %>
+        <% include partials/singleTeaching %>
+      <% }) %>
+    </ul>
+  </div>
+</div>
+
 <% include partials/footer %>

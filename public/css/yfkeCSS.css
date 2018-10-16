@@ -30,20 +30,25 @@ h5{
   }
 }
 
-.publicationDOI{
-	color: steelblue;
-}
-
 .listNoStyle{
 	list-style: none;
 }
 
-.publicationSource{
+.publicationDOI{
+	color: steelblue;
+}
+
+.contentItemItalic{
 	font-style: italic;
 }
 
 .contentTitle{
 	font-weight: 600;
+}
+
+.teachingDescription{
+	margin-bottom: 1.3em;
+	margin-top: 0.3em;
 }
 
 .sectionHeader{
