@@ -94,8 +94,9 @@ h5{
 
 .fa-play-circle{
 	font-size: 1.2em;
-	padding-left: 50%;
+	padding-left: 0%;
 	color: #222;
+	margin-top: 1rem;
 }
 
 .abstract{
@@ -210,6 +211,12 @@ nav:hover .navbar-link-selected:hover{
 	margin-left: 0%;
 }
 
+.visitingAddress{
+	margin-top: 4rem;
+}
+
+
+
 @media (min-width: 400px) {
 	.navbar-item{width: 18%;}
 }
@@ -219,6 +226,13 @@ nav:hover .navbar-link-selected:hover{
 	.navbar-item{width: 21%;}
 	.navbar-link-text{display: inline-block;}
 	.navbar-link-icon{display: none;}
+	.visitingAddress{
+		margin-top: 0rem;
+	}
+	.fa-play-circle{
+		padding-left: 50%;
+		margin-top: 0rem;
+	}
 }
 
 /* Larger than tablet */

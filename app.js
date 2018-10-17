@@ -24,7 +24,6 @@ var publicationSchema = new mongoose.Schema({
 	linkToArXiv: String,
 	doi: String,
 	abstract: String,
-	// year: Number
 	dateInt: Number
 });
 
