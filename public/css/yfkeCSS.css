@@ -4,7 +4,7 @@
 */
 
 hr{
-	margin: 6rem 0;
+	margin: 3rem 0;
 }
 
 h3{
@@ -233,6 +233,9 @@ nav:hover .navbar-link-selected:hover{
 	}
 	nav {
 		margin-bottom: 6rem;
+	}
+	hr {
+		margin: 6rem 0;
 	}
 }
 
