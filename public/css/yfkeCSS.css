@@ -182,6 +182,10 @@ nav {
 	background-color: white;
 }
 
+.navbar-link:hover #navbar-fa-file-alt{
+	color: steelblue;
+}
+
 /*This class is assigned with javascript to navbar-link corresponding to the current webpage/route*/
 .navbar-link-selected{
 	color: steelblue;
