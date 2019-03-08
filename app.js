@@ -12,7 +12,7 @@ app.use('/fontawesome/', express.static('node_modules/@fortawesome/fontawesome-f
 app.set("view engine", "ejs");
 
 // Connects to the 'content' database using a environment variable.
-mongoose.connect(process.env.DATABASEURL);
+mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true }); 
 
 // The publication schema, for the publication collection in the content database.
 var publicationSchema = new mongoose.Schema({
@@ -74,6 +74,7 @@ app.get("/publications", function(req, res){
 		if(err){
 			console.log("There was an error attempting to retrieve publications from the db.");
 		} else{
+			console.log("Publications succesfully extracted from db");
 			res.render("publications", {publications: publications});
 		}
 	})
