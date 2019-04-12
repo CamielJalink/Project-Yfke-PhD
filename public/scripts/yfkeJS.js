@@ -38,7 +38,7 @@ function abstractClicked(){
 // The following script handles the inserting of Yfke's email adress after rendering the page.
 var emailLocation = document.querySelector("#emailLocation");
 
-var address = "yfkedulek";
+var address = "dulek";
 address = address + "@cwi.nl";
 var mailToAddress = "mailto:" + address;
 
