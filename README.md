@@ -3,5 +3,5 @@
 This repository holds the source code for an academic (PhD) website for Yfke Dulek, 
 currently hosted on heroku at www.yfkedulek.com
 
-Site is built using NodeJS / Express, combined with ejs for the views and mongoDB hosted by mlab.
-Front-end js and html is my own work. CSS is built around the Skeleton CSS library: http://getskeleton.com/
+Backend is built using NodeJS with Express, using a Mongoose / MongoDB database-as-a-service hosted on mlab.
+Front-end is done using vanilla js and html/ejs for the views. CSS is built around the Skeleton CSS library: http://getskeleton.com/
