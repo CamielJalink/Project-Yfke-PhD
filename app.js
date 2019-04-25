@@ -110,6 +110,11 @@ app.get("/teaching", function(req,res){
 	})
 })
 
+// Something a little different
+app.get("/hidden", function(req, res){
+	res.render("hidden");
+})
+
 app.listen(process.env.PORT, process.env.IP, function(){
 	console.log("server is running");
 })
