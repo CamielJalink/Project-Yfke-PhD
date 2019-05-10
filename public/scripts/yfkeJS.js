@@ -38,15 +38,19 @@ function abstractClicked(){
 // The following script handles the inserting of Yfke's email adress after rendering the page.
 var emailLocation = document.querySelector("#emailLocation");
 
-var address = "dulek";
-address = address + "@cwi.nl";
-var mailToAddress = "mailto:" + address;
+if(!!emailLocation){
+	var address = "dulek";
+	address = address + "@cwi.nl";
+	var mailToAddress = "mailto:" + address;
+	
+	var mailAnchor = document.createElement("a");
+	mailAnchor.setAttribute("href", mailToAddress);
+	mailAnchor.textContent = address;
+	
+	emailLocation.appendChild(mailAnchor);
+}
 
-var mailAnchor = document.createElement("a");
-mailAnchor.setAttribute("href", mailToAddress);
-mailAnchor.textContent = address;
 
-emailLocation.appendChild(mailAnchor);
 
 
 
@@ -57,42 +61,33 @@ emailLocation.appendChild(mailAnchor);
 // Some 'hidden' code, if you catch my drift.
 
 var hiddenPassword1 = "m8Ri3";
+var hiddenHint1 = "Een boel tekst";
+
+var answerAreaVisible = false;
+var hiddenHintText = "";
 
 
-// Click handler nodig voor alle knoppen, dus als meerdere op deze pagina doe ze dan gelijk allemaal
-// document.getElementById('textbox_id').value    <-- zoiets kan ik gebruiken om bij de waarde te komen. 
-// Als die waarde klopt volgens hiddenPassword1 hierboven, 
-// 
 
-// Vervolgens wil ik een class toevoegen of verwijderen van de daadwerkelijke HINT text ofzo.
-// Dat kan ik doen door die <p> of whatever eerst met een querySelector op te vragen, 
-// En vervolgens daar classes op te zetten oid:
-// // function reset(){
-// 	colors = generateRandomColors(numSquares);
-// 	//pick a new random color from array
-// 	pickedColor = pickColor();
-// 	//change colorDisplay to match picked Color
-// 	colorDisplay.textContent = pickedColor;
-// 	resetButton.textContent = "New Colors"
-// 	messageDisplay.textContent = "";
-// 	//change colors of squares
-// 	for(var i = 0; i < squares.length; i++){
-// 		if(colors[i]){
-// 			squares[i].style.display = "block"
-// 			squares[i].style.background = colors[i];
-// 		} else {
-// 			squares[i].style.display = "none";
-// 		}
-// 	}
-// 	h1.style.background = "steelblue";
-// }
+var hiddenButton = document.querySelector("#hiddenButton");
 
-// Voorbeeld clickeventhandlers:
-		// modeButtons[i].addEventListener("click", function(){
-		// 	modeButtons[0].classList.remove("selected");
-		// 	modeButtons[1].classList.remove("selected");
-		// 	this.classList.add("selected");
-		// 	this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
-		// 	reset();    <-- dit verwijst naar een reset method in de colorGame, niet naar iets dat ik hier ook moet doen
-		// });
+if(!!hiddenButton){
+	hiddenButton.addEventListener("click", checkPassword);
+}
+
+
+function checkPassword(){
+	var input = document.querySelector("#hiddenInput").value;
+	var hiddenAnswerDiv = document.querySelector("#hiddenAnswerDiv");
 	
+	if(input == hiddenPassword1){
+		
+		hiddenAnswerDiv.classList.remove("hideAnswerDiv");
+
+		
+	} else{
+		hiddenAnswerDiv.classList.add("hideAnswerDiv");
+	}
+	
+	
+	
+}
