@@ -62,12 +62,7 @@ if(!!emailLocation){
 
 var hiddenPassword1 = "m8Ri3";
 var hiddenHint1 = "Een boel tekst";
-
-var answerAreaVisible = false;
-var hiddenHintText = "";
-
-
-
+var hiddenAnswer1 = "Iets van dummy text";
 var hiddenButton = document.querySelector("#hiddenButton");
 
 if(!!hiddenButton){
@@ -80,14 +75,10 @@ function checkPassword(){
 	var hiddenAnswerDiv = document.querySelector("#hiddenAnswerDiv");
 	
 	if(input == hiddenPassword1){
-		
 		hiddenAnswerDiv.classList.remove("hideAnswerDiv");
-
+		document.querySelector("#hiddenAnswerText").innerHTML = hiddenAnswer1;
 		
 	} else{
 		hiddenAnswerDiv.classList.add("hideAnswerDiv");
 	}
-	
-	
-	
 }
