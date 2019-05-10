@@ -61,8 +61,7 @@ if(!!emailLocation){
 // Some 'hidden' code, if you catch my drift.
 
 var hiddenPassword1 = "m8Ri3";
-var hiddenHint1 = "Een boel tekst";
-var hiddenAnswer1 = "Iets van dummy text";
+var hiddenAnswer1 = "Hoi Dr. D! Het is je gelukt om de eerste code te vinden! Gewapend met deze code heb ik een bericht naar het verleden weten te sturen in een poging om de dynamiek tussen jou en Alvero te veranderen zodat hij nooit voor zichzelf zal beginnen. Echter, het lijkt erop dat dit bericht nog niet genoeg was. We zullen een extra temporele code nodig hebben om het nog eens te proberen. Met de tijdmachine hier weet ik dat de volgende temporele code zal opdoen in het weekend van mei op juni, maar helaas wel helemaal in Fontaine Bleau! Succes Dr. Dulek, ik geloof in je!   -Claire";
 var hiddenButton = document.querySelector("#hiddenButton");
 
 if(!!hiddenButton){
