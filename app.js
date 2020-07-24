@@ -1,12 +1,13 @@
 var express = require("express");
 var app = express();
 var mongoose = require("mongoose"); 
+var sslRedirect = require("heroku-ssl-redirect");
 
+app.use(sslRedirect());
 app.use('/styles/', express.static('public/css'));
 app.use('/images/', express.static('public/images'));
 app.use('/scripts/', express.static('public/scripts'));
 app.use('/fontawesome/', express.static('node_modules/@fortawesome/fontawesome-free'));
-
 
 // This line tells express to expect views to be .ejs files.
 app.set("view engine", "ejs");
