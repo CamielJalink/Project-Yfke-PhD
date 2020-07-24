@@ -64,7 +64,7 @@ var Teaching = mongoose.model("Teaching", teachingSchema);
 // Forward alle routes to https. 
 app.get("*", function(req, res){
 	if(req.headers['x-forwarded-proto'] !== "https"){
-		res.redirect("https://yfkedulek.com" + req.url)
+		res.redirect("https://" + req.hostname + req.url)
 	} else{
 		next();
 	}
