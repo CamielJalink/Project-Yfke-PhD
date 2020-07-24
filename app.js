@@ -1,9 +1,7 @@
 var express = require("express");
 var app = express();
 var mongoose = require("mongoose"); 
-var sslRedirect = require("heroku-ssl-redirect");
 
-app.use(sslRedirect());
 app.use('/styles/', express.static('public/css'));
 app.use('/images/', express.static('public/images'));
 app.use('/scripts/', express.static('public/scripts'));
@@ -63,6 +61,14 @@ var teachingSchema = new mongoose.Schema({
 
 var Teaching = mongoose.model("Teaching", teachingSchema);
 
+// Forward alle routes to https. 
+app.get("*", function(req, res){
+	if(req.headers['x-forwarded-proto'] !== "https"){
+		res.redirect("https://www.yfkedulek.com" + req.url)
+	} else{
+		next();
+	}
+})
 
 // Root Route
 app.get("/", function(req, res){
